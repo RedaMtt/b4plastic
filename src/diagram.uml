@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1204.5" y="158.0">Weer</node>
+    <node x="995.5" y="712.0">Reis</node>
+    <node x="290.0" y="125.0">Feedback</node>
+    <node x="650.0" y="580.0">PlasticVisser</node>
+    <node x="293.5" y="580.0">PlasticZoeker</node>
+    <node x="705.5" y="-189.0">Plastic</node>
+    <node x="971.0" y="158.0">Route</node>
+    <node x="689.5" y="92.0">PlasticBundels</node>
+    <node x="488.5" y="191.0">Chat</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Reis" target="Route" relationship="TO_ONE">
+      <point x="0.0" y="-193.0" />
+      <point x="20.0" y="127.0" />
+    </edge>
+    <edge source="PlasticVisser" target="PlasticBundels" relationship="TO_MANY">
+      <point x="0.0" y="-325.0" />
+      <point x="0.0" y="193.0" />
+    </edge>
+    <edge source="PlasticBundels" target="Plastic" relationship="TO_MANY">
+      <point x="0.0" y="-193.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="Reis" target="Weer" relationship="TO_ONE">
+      <point x="0.0" y="-193.0" />
+      <point x="1086.0" y="565.0" />
+      <point x="1306.0" y="685.0" />
+      <point x="0.0" y="127.0" />
+    </edge>
+    <edge source="PlasticZoeker" target="Feedback" relationship="TO_MANY">
+      <point x="0.0" y="-325.0" />
+      <point x="60.0" y="160.0" />
+    </edge>
+    <edge source="PlasticZoeker" target="Chat" relationship="TO_MANY">
+      <point x="0.0" y="-325.0" />
+      <point x="426.0" y="565.0" />
+      <point x="566.0" y="565.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="PlasticVisser" target="Chat" relationship="TO_MANY">
+      <point x="0.0" y="-325.0" />
+      <point x="806.0" y="525.0" />
+      <point x="566.0" y="525.0" />
+      <point x="0.0" y="94.0" />
+    </edge>
+    <edge source="PlasticVisser" target="Feedback" relationship="TO_MANY">
+      <point x="0.0" y="-325.0" />
+      <point x="806.0" y="545.0" />
+      <point x="426.0" y="545.0" />
+      <point x="60.0" y="160.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.6073662265462126" showDependencies="true" x="859.0" y="530.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
