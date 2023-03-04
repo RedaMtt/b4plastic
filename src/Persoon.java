@@ -15,6 +15,10 @@ public class Persoon {
         this.gsm = gsm;
     }
 
+    public Persoon() {
+
+    }
+
     public int getId() {
         return id;
     }
