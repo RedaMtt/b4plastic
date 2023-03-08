@@ -1,0 +1,396 @@
+public interface IMagazijnier {
+    void aanvullenVoorraad();
+    void ontvangRapport();
+}
+
+import java.sql.Date;
+import java.util.List;
+public class Kapitein extends Persoon{
+    private Date shift;
+    private List<Route> routes;
+    public Kapitein(Date shift) {
+        this.shift = shift;
+    }
+    public void vindRoute(){}
+    public void vraagVoorAlternatieveRoute(){}
+    public Date getShift() {
+        return shift;
+    }
+    public void setShift(Date shift) {
+        this.shift = shift;
+    }
+}
+
+public class Locatie {
+    private int id;
+    private double longitude;
+    private double latitude;
+    public Locatie(int id, double longitude, double latitude) {
+        this.id = id;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public double getLongitude() {
+        return longitude;
+    }
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+    public double getLatitude() {
+        return latitude;
+    }
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+}
+
+import java.sql.Date;
+import java.util.List;
+
+public class Magazijn {
+    private int id;
+    private String Straat;
+    private String Straatnr;
+    private int postcode;
+    private boolean niveauIsHoog;
+    private double capaciteit;
+    private Magazijnier verantwoordelijke;
+    private List<PlasticItem> plasticItems;
+    public Magazijn(int id, String straat, String straatnr, int postcode, boolean niveauIsHoog, double capaciteit, Magazijnier verantwoordelijke) {
+        this.id = id;
+        Straat = straat;
+        Straatnr = straatnr;
+        this.postcode = postcode;
+        this.niveauIsHoog = niveauIsHoog;
+        this.capaciteit = capaciteit;
+        this.verantwoordelijke = verantwoordelijke;
+    }
+    public void updateStockageNiveau (){}
+    public void getStockageNiveau (){}
+    public void magazijnUpdate (){}
+    public void magazijnVullen (){}
+    public void magazijnControleren (){}
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getStraat() {
+        return Straat;
+    }
+    public void setStraat(String straat) {
+        Straat = straat;
+    }
+    public String getStraatnr() {
+        return Straatnr;
+    }
+    public void setStraatnr(String straatnr) {
+        Straatnr = straatnr;
+    }
+    public int getPostcode() {
+        return postcode;
+    }
+    public void setPostcode(int postcode) {
+        this.postcode = postcode;
+    }
+    public boolean isNiveauIsHoog() {
+        return niveauIsHoog;
+    }
+    public void setNiveauIsHoog(boolean niveauIsHoog) {
+        this.niveauIsHoog = niveauIsHoog;
+    }
+    public double getCapaciteit() {
+        return capaciteit;
+    }
+    public void setCapaciteit(double capaciteit) {
+        this.capaciteit = capaciteit;
+    }
+    public Magazijnier getVerantwoordelijke() {
+        return verantwoordelijke;
+    }
+    public void setVerantwoordelijke(Magazijnier verantwoordelijke) {
+        this.verantwoordelijke = verantwoordelijke;
+    }
+}
+
+import java.sql.Date;
+
+public class Magazijnier extends Persoon implements IMagazijnier {
+    private String role;
+    private Date shift;
+    public Magazijnier(int id, String role, Date shift) {
+        this.role = role;
+        this.shift = shift;
+    }
+
+    public Magazijnier(int id, String voornaam, String achternaam, String email, String password, String gsm, String role, Date shift) {
+        super(id, voornaam, achternaam, email, password, gsm);
+        this.role = role;
+        this.shift = shift;
+    }
+
+    public Magazijnier(String role, Date shift) {
+        this.role = role;
+        this.shift = shift;
+    }
+
+    @Override
+    public void aanvullenVoorraad() {
+        // aanvullen voorraad logica
+    }
+    @Override
+    public void ontvangRapport() {
+        // ontvang rapport logica
+    }
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public Date getShift() {
+        return shift;
+    }
+    public void setShift(Date shift) {
+        this.shift = shift;
+    }
+}
+
+public class Onderzoeker extends Persoon{
+    public Onderzoeker(){
+        super();
+    }
+
+    public Onderzoeker(int id, String voornaam, String achternaam, String email, String password, String gsm) {
+        super(id, voornaam, achternaam, email, password, gsm);
+    }
+
+    public void zoekVoorPlastic(){}
+}
+
+public abstract class Persoon {
+    private int id;
+    private String voornaam;
+    private String achternaam;
+    private String email;
+    private String password;
+    private String gsm;
+    public Persoon(int id, String voornaam, String achternaam, String email, String password, String gsm) {
+        this.id = id;
+        this.voornaam = voornaam;
+        this.achternaam = achternaam;
+        this.email = email;
+        this.password = password;
+        this.gsm = gsm;
+    }
+    public Persoon() {}
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getVoornaam() {
+        return voornaam;
+    }
+    public void setVoornaam(String voornaam) {
+        this.voornaam = voornaam;
+    }
+    public String getAchternaam() {
+        return achternaam;
+    }
+    public void setAchternaam(String achternaam) {
+        this.achternaam = achternaam;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getGsm() {
+        return gsm;
+    }
+    public void setGsm(String gsm) {
+        this.gsm = gsm;
+    }
+}
+
+import java.sql.Date;
+public class PlasticItem {
+    private PlasticType plasticType;
+    private double gewicht;
+    private boolean recycleerbaar;
+    public PlasticItem(PlasticType plasticType, double gewicht, boolean recycleerbaar) {
+        this.plasticType = plasticType;
+        this.gewicht = gewicht;
+        this.recycleerbaar = recycleerbaar;
+    }
+    public double getGewicht() {
+        return gewicht;
+    }
+    public void setGewicht(double gewicht) {
+        this.gewicht = gewicht;
+    }
+    public boolean isRecycleerbaar() {
+        return recycleerbaar;
+    }
+    public void setRecycleerbaar(boolean recycleerbaar) {
+        this.recycleerbaar = recycleerbaar;
+    }
+    public PlasticType getPlasticType() {
+        return plasticType;
+    }
+    public void setPlasticType(PlasticType plasticType) {
+        this.plasticType = plasticType;
+    }
+}
+
+public enum PlasticType {
+    PET,
+    HDPE,
+    PVC
+}
+
+import java.util.Date;
+public class PlasticZoeker extends Persoon{
+    private Date Shift;
+    private Scheepslading scheepslading;
+    public PlasticZoeker(int id, String voornaam, String achternaam, String email, String password, String gsm, Date shift) {
+        super(id, voornaam, achternaam, email, password, gsm);
+        Shift = shift;
+    }
+    public void beoordeelScheepslading(){
+
+    }
+    public Date getShift() {
+        return Shift;
+    }
+    public void setShift(Date shift) {
+        Shift = shift;
+    }
+}
+
+public class Route {
+    private int id;
+    private double longitude;
+    private double latidtude;
+    private Locatie locatie;
+    public Route(int id, double longitude, double latidtude, Locatie locatie) {
+        this.id = id;
+        this.longitude = longitude;
+        this.latidtude = latidtude;
+        this.locatie = locatie;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public double getLongitude() {
+        return longitude;
+    }
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+    public double getLatidtude() {
+        return latidtude;
+    }
+    public void setLatidtude(double latidtude) {
+        this.latidtude = latidtude;
+    }
+    public Locatie getLocatie() {
+        return locatie;
+    }
+    public void setLocatie(Locatie locatie) {
+        this.locatie = locatie;
+    }
+}
+
+public interface RouteBeheerServiceImp {
+    public abstract void AlternatieveRoute();
+    public abstract void RouteVerwijderen();
+    public abstract void ToonReisLijst();
+}
+
+public interface RouteService {
+    public abstract void AlternatieveRoute();
+    public abstract void RouteVerwijderen();
+    public abstract void ToonReisLijst();
+}
+
+import java.awt.*;
+import java.sql.Date;
+import java.util.List;
+
+public class Scheepslading {
+    private int id;
+    private double gewicht;
+    private Date ladingdatum;
+    private Kapitein ladingverantwoordelijke;
+    private boolean isVol;
+    private List<PlasticItem> plasticitems;
+    private Route route;
+    public Scheepslading(int id, double gewicht, Date ladingdatum, Kapitein ladingverantwoordelijke, boolean isVol, List<PlasticItem> plasticitems) {
+        this.id = id;
+        this.gewicht = gewicht;
+        this.ladingdatum = ladingdatum;
+        this.ladingverantwoordelijke = ladingverantwoordelijke;
+        this.isVol = isVol;
+        this.plasticitems = plasticitems;
+    }
+    public void getCompositie(){}
+    public void vullen(){}
+    public void aanpassen(){}
+    public void controleren(){}
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public double getGewicht() {
+        return gewicht;
+    }
+    public void setGewicht(double gewicht) {
+        this.gewicht = gewicht;
+    }
+    public Date getLadingdatum() {
+        return ladingdatum;
+    }
+    public void setLadingdatum(Date ladingdatum) {
+        this.ladingdatum = ladingdatum;
+    }
+    public Kapitein getLadingverantwoordelijke() {
+        return ladingverantwoordelijke;
+    }
+    public void setLadingverantwoordelijke(Kapitein ladingverantwoordelijke) {
+        this.ladingverantwoordelijke = ladingverantwoordelijke;
+    }
+    public boolean isVol() {
+        return isVol;
+    }
+    public void setVol(boolean vol) {
+        isVol = vol;
+    }
+    public List<PlasticItem> getPlasticitems() {
+        return plasticitems;
+    }
+    public void setPlasticitems(List<PlasticItem> plasticitems) {
+        this.plasticitems = plasticitems;
+    }
+}

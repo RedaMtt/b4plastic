@@ -7,6 +7,18 @@ public class Magazijnier extends Persoon implements IMagazijnier {
         this.role = role;
         this.shift = shift;
     }
+
+    public Magazijnier(int id, String voornaam, String achternaam, String email, String password, String gsm, String role, Date shift) {
+        super(id, voornaam, achternaam, email, password, gsm);
+        this.role = role;
+        this.shift = shift;
+    }
+
+    public Magazijnier(String role, Date shift) {
+        this.role = role;
+        this.shift = shift;
+    }
+
     @Override
     public void aanvullenVoorraad() {
         // aanvullen voorraad logica

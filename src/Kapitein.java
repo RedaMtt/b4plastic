@@ -15,4 +15,3 @@ public class Kapitein extends Persoon{
         this.shift = shift;
     }
 }
-
