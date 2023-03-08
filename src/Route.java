@@ -2,13 +2,14 @@ public class Route {
     private int id;
     private double longitude;
     private double latidtude;
+    private Locatie locatie;
 
-    public Route(int id, double longitude, double latidtude) {
+    public Route(int id, double longitude, double latidtude, Locatie locatie) {
         this.id = id;
         this.longitude = longitude;
         this.latidtude = latidtude;
+        this.locatie = locatie;
     }
-
 
     public int getId() {
         return id;
@@ -32,5 +33,13 @@ public class Route {
 
     public void setLatidtude(double latidtude) {
         this.latidtude = latidtude;
+    }
+
+    public Locatie getLocatie() {
+        return locatie;
+    }
+
+    public void setLocatie(Locatie locatie) {
+        this.locatie = locatie;
     }
 }

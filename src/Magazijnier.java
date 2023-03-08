@@ -1,30 +1,22 @@
 import java.sql.Date;
 
-public class Magazijnier {
-    private int id;
+public class Magazijnier extends Persoon implements IMagazijnier {
     private String role;
     private Date shift;
 
     public Magazijnier(int id, String role, Date shift) {
-        this.id = id;
         this.role = role;
         this.shift = shift;
     }
 
-    public void aanvullenVoorraad(){
-
+    @Override
+    public void aanvullenVoorraad() {
+        // aanvullen voorraad logica
     }
 
-    public void ontvangRapport(){
-
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    @Override
+    public void ontvangRapport() {
+        // ontvang rapport logica
     }
 
     public String getRole() {

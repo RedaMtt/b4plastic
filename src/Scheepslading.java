@@ -9,6 +9,7 @@ public class Scheepslading {
     private Kapitein ladingverantwoordelijke;
     private boolean isVol;
     private List<PlasticItem> plasticitems;
+    private Route route;
 
     public Scheepslading(int id, double gewicht, Date ladingdatum, Kapitein ladingverantwoordelijke, boolean isVol, List<PlasticItem> plasticitems) {
         this.id = id;

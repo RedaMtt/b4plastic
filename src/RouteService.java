@@ -1,4 +1,4 @@
-public interface ReisBeheerServiceImp {
+public interface RouteService {
     public abstract void AlternatieveRoute();
 
     public abstract void RouteVerwijderen();

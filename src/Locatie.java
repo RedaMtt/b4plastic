@@ -9,8 +9,9 @@ public class Locatie {
         this.latitude = latitude;
     }
 
-
-    public int getId() { return id; }
+    public int getId() {
+        return id;
+    }
 
     public void setId(int id) {
         this.id = id;

@@ -1,3 +1,6 @@
+import java.sql.Date;
+import java.util.List;
+
 public class Magazijn {
     private int id;
     private String Straat;
@@ -6,6 +9,8 @@ public class Magazijn {
     private boolean niveauIsHoog;
     private double capaciteit;
     private Magazijnier verantwoordelijke;
+
+    private List<PlasticItem> plasticItem;
 
     public Magazijn(int id, String straat, String straatnr, int postcode, boolean niveauIsHoog, double capaciteit, Magazijnier verantwoordelijke) {
         this.id = id;
@@ -80,3 +85,4 @@ public class Magazijn {
     }
 
 }
+
