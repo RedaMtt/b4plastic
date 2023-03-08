@@ -1,4 +1,5 @@
-import java.sql.Date;
+package Main.Java;
+
 import java.util.List;
 
 public class Magazijn {

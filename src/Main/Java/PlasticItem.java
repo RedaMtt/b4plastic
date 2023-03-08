@@ -1,4 +1,5 @@
-import java.sql.Date;
+package Main.Java;
+
 public class PlasticItem {
     private PlasticType plasticType;
     private double gewicht;

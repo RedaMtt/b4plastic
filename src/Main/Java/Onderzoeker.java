@@ -1,3 +1,5 @@
+package Main.Java;
+
 public class Onderzoeker extends Persoon{
     public Onderzoeker(){
         super();

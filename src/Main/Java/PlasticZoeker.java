@@ -1,3 +1,5 @@
+package Main.Java;
+
 import java.util.Date;
 public class PlasticZoeker extends Persoon{
     private Date Shift;

@@ -1,3 +1,5 @@
+package Main.Java;
+
 public class Locatie {
     private int id;
     private double longitude;

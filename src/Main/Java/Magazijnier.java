@@ -1,3 +1,5 @@
+package Main.Java;
+
 import java.sql.Date;
 
 public class Magazijnier extends Persoon implements IMagazijnier {

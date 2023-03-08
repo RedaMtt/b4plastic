@@ -1,3 +1,5 @@
+package Main.Java;
+
 import java.sql.Date;
 import java.util.List;
 public class Kapitein extends Persoon{

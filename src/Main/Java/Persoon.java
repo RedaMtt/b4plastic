@@ -1,3 +1,5 @@
+package Main.Java;
+
 public abstract class Persoon {
     private int id;
     private String voornaam;
