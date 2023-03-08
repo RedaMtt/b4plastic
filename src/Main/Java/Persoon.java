@@ -1,5 +1,6 @@
-package Main.Java;
+import org.springframework.stereotype.Component;
 
+@Component
 public abstract class Persoon {
     private int id;
     private String voornaam;

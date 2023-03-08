@@ -1,9 +1,12 @@
-package Main.Java;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Route {
     private int id;
     private double longitude;
     private double latidtude;
+    @Autowired
     private Locatie locatie;
     public Route(int id, double longitude, double latidtude, Locatie locatie) {
         this.id = id;

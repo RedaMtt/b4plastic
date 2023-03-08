@@ -11,6 +11,12 @@ public class Kapitein extends Persoon{
     public Kapitein(Date shift) {
         this.shift = shift;
     }
+
+    public Kapitein(int id, String voornaam, String achternaam, String email, String password, String gsm, Date shift, List<Route> routes) {
+        super(id, voornaam, achternaam, email, password, gsm);
+        this.shift = shift;
+        this.routes = routes;
+    }
     public void vindRoute(){}
     public void vraagVoorAlternatieveRoute(){}
     public Date getShift() {
@@ -50,7 +56,6 @@ public class Locatie {
     }
 }
 
-import java.sql.Date;
 import java.util.List;
 
 public class Magazijn {
@@ -125,18 +130,9 @@ import java.sql.Date;
 public class Magazijnier extends Persoon implements IMagazijnier {
     private String role;
     private Date shift;
-    public Magazijnier(int id, String role, Date shift) {
-        this.role = role;
-        this.shift = shift;
-    }
 
     public Magazijnier(int id, String voornaam, String achternaam, String email, String password, String gsm, String role, Date shift) {
         super(id, voornaam, achternaam, email, password, gsm);
-        this.role = role;
-        this.shift = shift;
-    }
-
-    public Magazijnier(String role, Date shift) {
         this.role = role;
         this.shift = shift;
     }
@@ -149,6 +145,7 @@ public class Magazijnier extends Persoon implements IMagazijnier {
     public void ontvangRapport() {
         // ontvang rapport logica
     }
+
     public String getRole() {
         return role;
     }
@@ -229,7 +226,6 @@ public abstract class Persoon {
     }
 }
 
-import java.sql.Date;
 public class PlasticItem {
     private PlasticType plasticType;
     private double gewicht;
@@ -333,7 +329,6 @@ public interface RouteService {
     public abstract void ToonReisLijst();
 }
 
-import java.awt.*;
 import java.sql.Date;
 import java.util.List;
 

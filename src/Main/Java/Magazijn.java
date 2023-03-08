@@ -1,7 +1,9 @@
-package Main.Java;
+import org.springframework.beans.factory.annotation.*;
 
 import java.util.List;
+import org.springframework.stereotype.*;
 
+@Component
 public class Magazijn {
     private int id;
     private String Straat;
@@ -9,7 +11,9 @@ public class Magazijn {
     private int postcode;
     private boolean niveauIsHoog;
     private double capaciteit;
+    @Autowired
     private Magazijnier verantwoordelijke;
+    @Autowired
     private List<PlasticItem> plasticItems;
     public Magazijn(int id, String straat, String straatnr, int postcode, boolean niveauIsHoog, double capaciteit, Magazijnier verantwoordelijke) {
         this.id = id;

@@ -1,5 +1,3 @@
-package Main.Java;
-
 public interface RouteBeheerServiceImp {
     public abstract void AlternatieveRoute();
     public abstract void RouteVerwijderen();

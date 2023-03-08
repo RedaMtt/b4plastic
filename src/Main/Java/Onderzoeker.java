@@ -1,5 +1,6 @@
-package Main.Java;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Onderzoeker extends Persoon{
     public Onderzoeker(){
         super();
