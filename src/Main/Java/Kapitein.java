@@ -18,6 +18,11 @@ public class Kapitein extends Persoon{
         this.shift = shift;
         this.routes = routes;
     }
+
+    public Kapitein() {
+
+    }
+
     public void vindRoute(){}
     public void vraagVoorAlternatieveRoute(){}
     public Date getShift() {

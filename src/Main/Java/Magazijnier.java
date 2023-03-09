@@ -12,6 +12,10 @@ public class Magazijnier extends Persoon implements IMagazijnier {
         this.shift = shift;
     }
 
+    public Magazijnier() {
+
+    }
+
     @Override
     public void aanvullenVoorraad() {
         // aanvullen voorraad logica

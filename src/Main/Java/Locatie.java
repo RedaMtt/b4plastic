@@ -3,7 +3,7 @@ import org.springframework.stereotype.*;
 
 @Component
 public class Locatie {
-    @Autowired
+
     private int id;
     private double longitude;
     private double latitude;

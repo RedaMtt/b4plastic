@@ -53,4 +53,5 @@ public abstract class Persoon {
     public void setGsm(String gsm) {
         this.gsm = gsm;
     }
+
 }

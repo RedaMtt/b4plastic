@@ -11,6 +11,11 @@ public class PlasticZoeker extends Persoon{
         super(id, voornaam, achternaam, email, password, gsm);
         Shift = shift;
     }
+
+    public PlasticZoeker() {
+
+    }
+
     public void beoordeelScheepslading(){
 
     }
