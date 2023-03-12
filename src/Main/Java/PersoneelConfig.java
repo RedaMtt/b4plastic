@@ -6,8 +6,8 @@ import java.util.List;
 
 @Configuration
 @ComponentScan
-//@EnableAsync
-//@EnableMBeanExport
+@EnableAsync
+@EnableMBeanExport
 public class PersoneelConfig {
 
     @Bean

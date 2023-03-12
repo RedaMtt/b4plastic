@@ -16,7 +16,7 @@ public class ToonPersoneel {
     }
 
     public static void main(String[] args) {
-        System.out.println("testje");
+        System.out.println("test");
 
         // Hier is er een probleem
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(PersoneelConfig.class);
