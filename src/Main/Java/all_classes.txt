@@ -1,7 +1,4 @@
-public interface IMagazijnier {
-    void aanvullenVoorraad();
-    void ontvangRapport();
-}
+
 
 import java.sql.Date;
 import java.util.List;
@@ -127,7 +124,7 @@ public class Magazijn {
 
 import java.sql.Date;
 
-public class Magazijnier extends Persoon implements IMagazijnier {
+public class Magazijnier extends Persoon{
     private String role;
     private Date shift;
 

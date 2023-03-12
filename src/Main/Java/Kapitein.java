@@ -13,10 +13,8 @@ public class Kapitein extends Persoon{
         this.shift = shift;
     }
 
-    public Kapitein(int id, String voornaam, String achternaam, String email, String password, String gsm, Date shift, List<Route> routes) {
+    public Kapitein(int id, String voornaam, String achternaam, String email, String password, String gsm) {
         super(id, voornaam, achternaam, email, password, gsm);
-        this.shift = shift;
-        this.routes = routes;
     }
 
     public Kapitein() {
@@ -30,5 +28,13 @@ public class Kapitein extends Persoon{
     }
     public void setShift(Date shift) {
         this.shift = shift;
+    }
+
+    public List<Route> getRoutes() {
+        return routes;
+    }
+
+    public void setRoutes(List<Route> routes) {
+        this.routes = routes;
     }
 }

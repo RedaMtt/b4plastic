@@ -7,9 +7,8 @@ public class PlasticZoeker extends Persoon{
     private Date Shift;
     @Autowired
     private Scheepslading scheepslading;
-    public PlasticZoeker(int id, String voornaam, String achternaam, String email, String password, String gsm, Date shift) {
+    public PlasticZoeker(int id, String voornaam, String achternaam, String email, String password, String gsm) {
         super(id, voornaam, achternaam, email, password, gsm);
-        Shift = shift;
     }
 
     public PlasticZoeker() {

@@ -9,7 +9,6 @@
     <node x="-180.0" y="2139.150963035598">RouteBeheerServiceImp</node>
     <node x="656.6574339182215" y="71.92602896193102">PlasticZoeker</node>
     <node x="239.02236390139262" y="92.51440065071165">Magazijnier</node>
-    <node x="-67.8030092628452" y="-314.0">IMagazijnier</node>
     <node x="205.52236390139257" y="1342.5089271735928">PlasticItem</node>
     <node x="75.0" y="2139.150963035598">RouteService</node>
     <node x="1293.8338433733238" y="966.0535659391799">Kapitein</node>
@@ -37,10 +36,6 @@
       <point x="0.0" y="-0.0" />
     </edge>
     <edge source="Onderzoeker" target="Persoon" relationship="GENERALIZATION">
-      <point x="0.0" y="-0.0" />
-      <point x="0.0" y="-0.0" />
-    </edge>
-    <edge source="Magazijnier" target="IMagazijnier" relationship="REALIZATION">
       <point x="0.0" y="-0.0" />
       <point x="0.0" y="-0.0" />
     </edge>

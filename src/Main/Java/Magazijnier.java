@@ -2,25 +2,20 @@ import org.springframework.stereotype.*;
 
 import java.sql.Date;
 @Component
-public class Magazijnier extends Persoon implements IMagazijnier {
+public class Magazijnier extends Persoon {
     private String role;
     private Date shift;
 
-    public Magazijnier(int id, String voornaam, String achternaam, String email, String password, String gsm, String role, Date shift) {
+    public Magazijnier(int id, String voornaam, String achternaam, String email, String password, String gsm) {
         super(id, voornaam, achternaam, email, password, gsm);
-        this.role = role;
-        this.shift = shift;
     }
 
     public Magazijnier() {
-
     }
 
-    @Override
     public void aanvullenVoorraad() {
         // aanvullen voorraad logica
     }
-    @Override
     public void ontvangRapport() {
         // ontvang rapport logica
     }
