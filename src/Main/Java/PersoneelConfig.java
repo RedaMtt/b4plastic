@@ -1,10 +1,13 @@
 import org.springframework.context.annotation.*;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 @ComponentScan
+//@EnableAsync
+//@EnableMBeanExport
 public class PersoneelConfig {
 
     @Bean

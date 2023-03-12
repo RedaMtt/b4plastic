@@ -18,12 +18,12 @@ public class ToonPersoneel {
     public static void main(String[] args) {
         System.out.println("testje");
 
+        // Hier is er een probleem
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(PersoneelConfig.class);
 
         for (Persoon p: personen) {
             System.out.println(p.toString());
         }
-
     }
 }
 

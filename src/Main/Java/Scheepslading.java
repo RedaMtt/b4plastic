@@ -4,17 +4,13 @@ import org.springframework.stereotype.Component;
 import java.sql.Date;
 import java.util.List;
 
-@Component
 public class Scheepslading {
     private int id;
     private double gewicht;
     private Date ladingdatum;
-    @Autowired
     private Kapitein ladingverantwoordelijke;
     private boolean isVol;
-    @Autowired
     private List<PlasticItem> plasticitems;
-    @Autowired
     private Route route;
     public Scheepslading(int id, double gewicht, Date ladingdatum, Kapitein ladingverantwoordelijke, boolean isVol, List<PlasticItem> plasticitems) {
         this.id = id;

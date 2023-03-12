@@ -1,7 +1,6 @@
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-@Component
 public class Locatie {
 
     private int id;

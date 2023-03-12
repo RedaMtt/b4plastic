@@ -7,7 +7,6 @@ import org.springframework.stereotype.*;
 @Component
 public class Kapitein extends Persoon{
     private Date shift;
-    @Autowired
     private List<Route> routes;
     public Kapitein(Date shift) {
         this.shift = shift;
