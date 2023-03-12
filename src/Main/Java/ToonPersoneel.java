@@ -7,15 +7,19 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 public class ToonPersoneel {
-    private List<Persoon> personen;
+    private static List<Persoon> personen;
 
     @Autowired
     public ToonPersoneel(List<Persoon> personen) {
-        this.personen = personen;
+        ToonPersoneel.personen = personen;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(MyApp.class, args);
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(PersoneelConfig.class);
+
+        for (Persoon p: personen) {
+            System.out.println(p.toString());
+        }
     }
 }
 

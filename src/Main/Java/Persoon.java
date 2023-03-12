@@ -64,4 +64,16 @@ public abstract class Persoon implements IPersoon {
     public void setGsm(String gsm) {
         this.gsm = gsm;
     }
+
+    @Override
+    public String toString() {
+        return "Persoon{" +
+                "id=" + id +
+                ", voornaam='" + voornaam + '\'' +
+                ", achternaam='" + achternaam + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", gsm='" + gsm + '\'' +
+                '}';
+    }
 }
